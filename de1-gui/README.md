@@ -16,22 +16,22 @@
 
 The virtual <b>DE1-SoC</b> consists of two parts:
 
-- a Tcl file (`de1_gui.tcl`) that we need to load in <b>ModelSim</b> before Simulation to implement the <b>GUI</b>, and
-- a SystemVerilog file (`de1_gui.sv`) that we need to instantiate in our Testbench to connect to the <b>GUI</b> from our design.
+- a Tcl file [(`de1_gui.tcl`)](de1_gui.tcl) that we need to load in <b>ModelSim</b> before Simulation to implement the <b>GUI</b>, and
+- a SystemVerilog file [(`de1_gui.sv`)](de1_gui.sv) that we need to instantiate in our Testbench to connect to the <b>GUI</b> from our design.
 
 This directory also contains a simple synthesizable design we can use to test that we are using the virtual board correctly (`button_pusher.sv`) and a Testbench that shows how to connect that design to the <b>GUI</b>.
 
-When simulating on <b>Modelsim</b>, these files are not copied to the task folder, but referenced directly from the `de1-gui` folder (<i>“Reference from current location”</i> when we add the file). The `de1_gui.sv` file does not work without the `de1_gui.tcl` interface and it is not synthesizable. 
+When simulating on <b>Modelsim</b>, these files are not copied to the task folder, but referenced directly from the `de1-gui` folder (<i>“Reference from current location”</i> when we add the file). The [(`de1_gui.sv`)](de1_gui.sv) file does not work without the [(`de1_gui.tcl`)](de1_gui.tcl) interface and it is not synthesizable. 
 
 ## Setting Up The Simulation
 
-We launch <b>ModelSim</b> and create our project. We then add `button_pusher.sv`, `de1_gui.sv`, and `tb_de1_gui.sv` to the project. For simplicity, we add files by referencing them in the existing directory rather than copying to the working directory:
+We launch <b>ModelSim</b> and create our project. We then add [(`button_pusher.sv`)](button_pusher.sv), [(`de1_gui.sv`)](de1_gui.sv), and [`tb_de1_gui.sv`](tb_de1_gui.sv) to the project. For simplicity, we add files by referencing them in the existing directory rather than copying to the working directory:
 
 <p align = "center"><img src = "figures/add-file.png" width = "30%" height = "30%" title = "Adding a File by Reference"></p>
 
 We compile the entire design as usual, and load the compiled design by double-clicking on the `tb_de1_gui` in the <b>_Library_</b> tab.
 
-Next, we load the `de1_gui.tcl` via <b>_File&rarr;Load&rarr;Macro&nbsp;File..._</b> or by issuing the `source de1_gui.tcl` command in the <b>Transcript</b> frame. We then see a new window that shows the switches, buttons, LEDs, and 7-Segment Displays of the <b>DE1-SoC</b> board:
+Next, we load the [(`de1_gui.tcl`)](de1_gui.tcl) via <b>_File&rarr;Load&rarr;Macro&nbsp;File..._</b> or by issuing the `source de1_gui.tcl` command in the <b>Transcript</b> frame. We then see a new window that shows the switches, buttons, LEDs, and 7-Segment Displays of the <b>DE1-SoC</b> board:
 
 <p align = "center"><img src = "figures/de1-gui-loaded.png" width = "50%" height = "50%" title = "DE1-SoC GUI"></p>
 
@@ -59,7 +59,7 @@ We have to **manually advance the Simulation** — otherwise the simulated Hardw
 
 ## Simulation Versus The Real Thing™
 
-With our physical <b>DE1-SoC</b>, we synthesize `button_pusher` and download it to the <b>FPGA</b>. We include our pin assignments from [(`DE1_SoC.qsf`)](DE1_SoC.qsf) We see that the initial state of the Simulation differs from the real board, which will in all likelihood have the 7-Segment Displays lit:
+With our physical <b>DE1-SoC</b>, we synthesize `button_pusher` and download it to the <b>FPGA</b>. We include our pin assignments from [(`DE1_SoC.qsf`)](../settings/DE1_SoC.qsf) We see that the initial state of the Simulation differs from the real board, which will in all likelihood have the 7-Segment Displays lit:
 
 <p align = "center"><img src = "figures/real-board-before-reset.jpg" width = "33%" height = "33%" title = "Real DE1-SoC"></p>
 
