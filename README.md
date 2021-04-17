@@ -22,9 +22,9 @@ A simple digital datapath is implemented using two pieces of Software: <b>Quartu
 
 These were illustrated prior to the actual design of the circuit in order to be able to create a Finite State Machine (FSM) Controller in the [(`statemachine.sv`)](statemachine.sv) file.
 
-<p align = "center"><img src = "figures/Cases_A_To_X.jpg" width = "50%" height = "50%" title = "Design Cases A to X"></p>
+<p align = "center"><img src = "figures/Cases_A_To_X.JPG" width = "50%" height = "50%" title = "Design Cases A to X"></p>
 
-<p align = "center"><img src = "figures/Cases_Y_To_c.jpg" width = "50%" height = "50%" title = "Design Cases Y to c"></p>
+<p align = "center"><img src = "figures/Cases_Y_To_c.JPG" width = "50%" height = "50%" title = "Design Cases Y to c"></p>
 
 ## Encoding
 
