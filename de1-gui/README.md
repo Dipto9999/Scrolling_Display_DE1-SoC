@@ -25,7 +25,7 @@ When simulating on <b>Modelsim</b>, these files are not copied to the task folde
 
 ## Setting Up The Simulation
 
-We launch <b>ModelSim</b> and create our project. We then add [(`button_pusher.sv`)](button_pusher.sv), [(`de1_gui.sv`)](de1_gui.sv), and [`tb_de1_gui.sv`](tb_de1_gui.sv) to the project. For simplicity, we add files by referencing them in the existing directory rather than copying to the working directory:
+We launch <b>ModelSim</b> and create our project. We then add [(`button_pusher.sv`)](button_pusher.sv), [(`de1_gui.sv`)](de1_gui.sv), and [(`tb_de1_gui.sv`)](tb_de1_gui.sv) to the project. For simplicity, we add files by referencing them in the existing directory rather than copying to the working directory:
 
 <p align = "center"><img src = "figures/add-file.png" width = "30%" height = "30%" title = "Adding a File by Reference"></p>
 
