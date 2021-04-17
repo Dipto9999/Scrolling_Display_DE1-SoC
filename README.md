@@ -104,7 +104,7 @@ For our purposes, we have instantiated this in our [(`tb_scrolling_display.sv`)]
 
 ### FPGA Board
 
-A project is created using <b>Quartus Prime</b> software to load the `.sv` files onto the <b>DE1-SoC FPGA</b> board. The board must be specified in the Project Wizard and the pin assignments must be imported from the [(`DE1_SoC.qsf`)](settings/DE1_SoC.qsf) file and copied into the [(`scrolling_display.qsf`)](quartus_simulation/scrolling_display.sof) file. This step is crucial to avoid damaging the $200 piece of equipment. Following this step, the <i>Start Compilation</i> tool is run over the duration of several minutes. Using the <i>Programmer</i> tool, the design is downloaded onto the <b>DE1-SoC FPGA</b> board via <b>JTAG</b>. 
+A project is created using <b>Quartus Prime</b> software to load the `.sv` files onto the <b>DE1-SoC FPGA</b> board. The board must be specified in the Project Wizard and the pin assignments must be imported from the [(`DE1_SoC.qsf`)](settings/DE1_SoC.qsf) file and copied into the [(`scrolling_display.qsf`)](quartus_simulation/scrolling_display.qsf) file. This step is crucial to avoid damaging the $200 piece of equipment. Following this step, the <i>Start Compilation</i> tool is run over the duration of several minutes. Using the <i>Programmer</i> tool, the design is downloaded onto the <b>DE1-SoC FPGA</b> board via <b>JTAG</b>. 
 
 The videos in the [`demonstrations`](demonstrations) directory show the end result of this procedure as well as the output on the <b>DE1-SoC FPGA</b>. This directory is tracked using <b>Git LFS</b> due to size restrictions.</i>
 
