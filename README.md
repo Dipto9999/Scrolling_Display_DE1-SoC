@@ -96,7 +96,7 @@ For each of the `.sv` files included in this project, a corresponding Testbench 
 These Testbenches were simulated on <b>Modelsim</b> in a very lengthy procedure involving clock-timing to modify inputs on a positive clock edge and wait until the negative clock edge to evaluate the outputs. Due to timing issues arising during this testing procedure, every timed delay has been commented in the `tb_ ... .sv` files
 to make debugging the <b>Verilog</b> a smoother process. 
 
-#### Virtual-DE1-SoC
+#### Virtual DE1-SoC
 
 This was developed by <b>The University of British Columbia Electrical and Computer Engineering Department</b> as an emulator. It allows a visual representation of the functionality of the real board (i.e. buttons, LEDs, HEX Displays). More detail is provided in the [`de1-gui`](de1-gui) directory.
 
@@ -104,7 +104,7 @@ For our purposes, we have instantiated this in our [(`tb_scrolling_display.sv`)]
 
 ### FPGA Board
 
-A project is created using <b>Quartus Prime</b> software to load the `.sv` files onto the <b>DE1-SoC FPGA</b> board. The board must be specified in the Project Wizard and the pin assignments must be imported from the [(`DE1_SoC.qsf`)](settings/`DE1_SoC.qsf) file and copied into the [(`scrolling_display.qsf`)](quartus_simulation/output_files/scrolling_display.sof) file. This step is crucial to avoid damaging the $200 piece of equipment. Following this step, the <i>Start Compilation</i> tool is run over the duration of several minutes. Using the <i>Programmer</i> tool, the design is downloaded onto the <b>DE1-SoC FPGA</b> board via <b>JTAG</b>. 
+A project is created using <b>Quartus Prime</b> software to load the `.sv` files onto the <b>DE1-SoC FPGA</b> board. The board must be specified in the Project Wizard and the pin assignments must be imported from the [(`DE1_SoC.qsf`)](settings/DE1_SoC.qsf) file and copied into the [(`scrolling_display.qsf`)](quartus_simulation/scrolling_display.sof) file. This step is crucial to avoid damaging the $200 piece of equipment. Following this step, the <i>Start Compilation</i> tool is run over the duration of several minutes. Using the <i>Programmer</i> tool, the design is downloaded onto the <b>DE1-SoC FPGA</b> board via <b>JTAG</b>. 
 
 The videos in the [`demonstrations`](demonstrations) directory show the end result of this procedure as well as the output on the <b>DE1-SoC FPGA</b>. This directory is tracked using <b>Git LFS</b> due to size restrictions.</i>
 
