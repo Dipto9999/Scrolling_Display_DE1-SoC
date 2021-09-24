@@ -100,7 +100,7 @@ to make debugging the <b>Verilog</b> a smoother process.
 
 This was developed by <b>The University of British Columbia Electrical and Computer Engineering Department</b> as an emulator. It allows a visual representation of the functionality of the real board (i.e. buttons, LEDs, HEX Displays). More detail is provided in the [`de1-gui`](de1-gui) directory.
 
-For our purposes, we have instantiated this in our [(`tb_scrolling_display.sv`)](tb_scrolling_display.sv) file to try our best at mimicing the actual <b>DE1-SoC FPGA</b> board.
+For our purposes, we have instantiated this in our [(`tb_scrolling_display.sv`)](tb_scrolling_display.sv) file to try our best at mimicking the actual <b>DE1-SoC FPGA</b> board.
 
 ### FPGA Board
 
