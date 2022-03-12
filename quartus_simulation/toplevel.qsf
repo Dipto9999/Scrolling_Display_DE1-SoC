@@ -19,14 +19,14 @@
 #
 # Quartus Prime
 # Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-# Date created = 02:09:58  April 15, 2021
+# Date created = 18:26:06  March 08, 2022
 #
 # -------------------------------------------------------------------------- #
 #
 # Notes:
 #
 # 1) The default values for assignments are stored in the file:
-#		scrolling_display_assignment_defaults.qdf
+#		toplevel_assignment_defaults.qdf
 #    If this file doesn't exist, see file:
 #		assignment_defaults.qdf
 #
@@ -39,13 +39,14 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY scrolling_display
+set_global_assignment -name TOP_LEVEL_ENTITY toplevel
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "02:09:58  APRIL 15, 2021"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:26:06  MARCH 08, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
+set_global_assignment -name SYSTEMVERILOG_FILE ../toplevel.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../statemachine.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../scrolling_display.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ../led_handler.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../driver.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../defines.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../datapath.sv
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name BOARD "DE1-SoC Board"
